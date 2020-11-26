@@ -1,6 +1,5 @@
 window.addEventListener("load", function () {
-    let longi;
-    let lati;
+    
     let date = new Date();
     let num = document.querySelector('.num');
     let time = document.querySelector('.time');
@@ -40,13 +39,10 @@ window.addEventListener("load", function () {
 
 
     
-        
-
-            longi = 75.874304;
-            lati = 22.7311616;
+  
             const proxy = "https://cors-anywhere.herokuapp.com/"
 
-            const api = `${proxy}api.openweathermap.org/data/2.5/weather?lat=${lati}&lon=${longi}&appid=8496abffee94f9de0fecbb43036e21dc`
+            const api = `${proxy}api.openweathermap.org/data/2.5/weather?lat=22.7311616&lon=75.874304&appid=8496abffee94f9de0fecbb43036e21dc`
             // 8496abffee94f9de0fecbb43036e21dc
             // https://cors-anywhere.herokuapp.com/api.openweathermap.org/data/2.5/weather?lat=22.7311616&lon=75.874304&appid=8496abffee94f9de0fecbb43036e21dc
 

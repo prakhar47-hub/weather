@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Epilogue', sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, #89f7fe, #66a6ff);
+    color: white;
+}
+
+.logo{
+    display: flex;
+    height: 23vh;
+    width: 50%;
+   flex-direction: column;
+    align-items: center;
+}
+
+.temp{
+    display: flex;
+}
+
+
+.location{
+    margin-top: 70px;
+    text-align: center;
+}
+.time{
+
+    margin-top: 8px;
+}
+
+.degree{
+    margin-left: 6px;
+}

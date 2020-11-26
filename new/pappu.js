@@ -5,6 +5,9 @@ window.addEventListener("load", function () {
     let num = document.querySelector('.num');
     let time = document.querySelector('.time');
     let icon = document.querySelector('.icon');
+    let btn = document.querySelector('.btn');
+    let on = 0;
+    let degree = document.querySelector('.degree');
     let numday = date.getDate();
     let info = document.querySelector('.info');
     let weekday = new Array(7);
@@ -33,7 +36,7 @@ window.addEventListener("load", function () {
     month[11] = "December";
 
     time.textContent = weekday[date.getDay()] + ' ' + numday + ' | ' + month[date.getMonth()];
-    
+
 
 
     if (navigator.geolocation) {
@@ -53,13 +56,29 @@ window.addEventListener("load", function () {
                 })
                 .then(data => {
                     console.log(data);
-                    const temp = data.main.temp;
+                    let temp = data.main.temp;
 
-                    const temperature = temp - 273.15;
+                    num.textContent = temp - 273.15;
+                    degree.textContent = 'C';
 
-                    num.textContent = temperature;
+                    btn.addEventListener("click", () => {
+                        if (on == 0) {
 
-                    console.log(temperature);
+                            num.textContent = Math.floor((temp - 273.15) * (9 / 5) + 32);
+                            degree.textContent = 'F';
+                            on = 1;
+
+                        }
+                        else {
+                            num.textContent = temp - 273.15;
+                            degree.textContent = 'C';
+
+                            on = 0;
+                        }
+                    });
+
+
+                    console.log(temp);
 
                     let image = data.weather[0].icon;
 
@@ -71,7 +90,7 @@ window.addEventListener("load", function () {
 
 
 
-                    
+
 
                 });
         });

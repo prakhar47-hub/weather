@@ -40,3 +40,30 @@ body{
 .degree{
     margin-left: 6px;
 }
+
+.btn{
+    background: none;
+    outline: none;
+    border: 2px solid;
+    border-radius: 20px;
+    border-color: white;
+    padding: 12px 45px;
+    margin-top: 20px;
+    cursor: pointer;
+    color: white;
+       transition: all;
+       transition-duration: 0.6s;
+}   
+
+
+.btn:hover{
+    box-shadow: 0px 0px 15px 2px white;
+    background-color: white;
+    color: black;
+}
+
+.btn:active{
+    box-shadow: 0px 0px 15px 2px rgb(182, 181, 181);
+    background-color: rgb(182, 181, 181);
+    color: black;
+}

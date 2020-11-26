@@ -39,15 +39,16 @@ window.addEventListener("load", function () {
 
 
 
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function (position) {
+    
+        
 
-            longi = position.coords.longitude;
-            lati = position.coords.latitude;
+            longi = 75.874304;
+            lati = 22.7311616;
             const proxy = "https://cors-anywhere.herokuapp.com/"
 
             const api = `${proxy}api.openweathermap.org/data/2.5/weather?lat=${lati}&lon=${longi}&appid=8496abffee94f9de0fecbb43036e21dc`
             // 8496abffee94f9de0fecbb43036e21dc
+            // https://cors-anywhere.herokuapp.com/api.openweathermap.org/data/2.5/weather?lat=22.7311616&lon=75.874304&appid=8496abffee94f9de0fecbb43036e21dc
 
             console.log(api);
             fetch(api)
@@ -93,7 +94,7 @@ window.addEventListener("load", function () {
 
 
                 });
-        });
+        
 
-    }
+    
 });
